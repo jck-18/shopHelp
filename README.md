@@ -29,16 +29,16 @@ This repository demonstrates a simple **shopping cart** application in Go. The p
 
 1. **Clone** the repository (HTTPS):
    ```bash
-   git clone https://github.com/<YourUsername>/shopping-lab.git
+   git clone https://github.com/<YourUsername>/shopHelp.git
    ```
    Or (SSH):
    ```bash
-   git clone git@github.com:<YourUsername>/shopping-lab.git
+   git clone git@github.com:<YourUsername>/shopHelp.git
    ```
 
 2. **Navigate** into the project folder:
    ```bash
-   cd shopping-lab
+   cd shopHelp
    ```
 
 3. (Optional) **Initialize** or **update** dependencies:
@@ -83,20 +83,20 @@ Items in your shopping cart:
 Total: $79.98
 ```
 
-### Importing the `shoppingcart` Package in Another Project
+### Importing the `shopHelp` Package in Another Project
 
 If you want to **reuse** this package in a separate project:
 
 1. Inside your other Go project, run:
    ```bash
-   go get github.com/<YourUsername>/shopping-lab/shoppingcart
+   go get github.com/<YourUsername>/shopHelp/shopHelp
    ```
 2. In your Go files, import and use the package:
    ```go
-   import "github.com/<YourUsername>/shopping-lab/shoppingcart"
+   import "github.com/<YourUsername>/shopHelp/shopHelp"
 
    func main() {
-       cart := shoppingcart.NewCart()
+       cart := shopHelp.NewCart()
        cart.AddItem("Laptop", 999.99)
        // ...
    }
@@ -104,17 +104,6 @@ If you want to **reuse** this package in a separate project:
 
 ---
 
-## Testing
-
-A basic unit test is provided in `shoppingcart/shoppingcart_test.go`. To run it, navigate to the project’s root directory and execute:
-
-```bash
-go test ./...
-```
-
-You should see output indicating whether the tests passed.
-
----
 
 ## Project Structure
 
@@ -124,14 +113,12 @@ shopping-lab/
 ├── main.go                // Interactive CLI for the shopping cart
 ├── shoppingcart/
 │   ├── shoppingcart.go    // Core shopping cart package
-│   └── shoppingcart_test.go  // Unit tests for the shopping cart
 └── README.md              // Project documentation
 ```
 
 - **`go.mod`**: Go module definition, including the module path.
 - **`main.go`**: The entry point of the application. Prompts for user input, adds items to the cart, and prints results.
-- **`shoppingcart` folder**: Contains the `shoppingcart.go` source file, which defines the `Cart` and `Item` structures, and their associated logic.
-- **`_test.go` file**: Contains tests for the shopping cart package.
+- **`shoppingcart` folder**: Contains the `shopHelp.go` source file, which defines the `Cart` and `Item` structures, and their associated logic.
 
 ---
 
